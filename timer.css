@@ -1,0 +1,32 @@
+.timer {
+  font-size: 5em;
+  font-family: BlackFuture;
+  color: #fff;
+  right: 0px;
+  padding: 10px;
+}
+  
+.timer span {
+  margin: 0 5px;
+}
+
+.timer-txt {
+  color: #ffffff;
+  font-family: Era;
+  text-align: center;
+}
+
+.timer-img{
+  text-align: center;
+  background-color: #000231;
+}
+
+@media screen and (max-width : 768px){
+  .timer {
+    display: none;
+  }
+  .next-version-logo{
+    width: 250px;
+    height: auto;
+  }
+}

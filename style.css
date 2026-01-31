@@ -1,0 +1,143 @@
+@font-face {
+    font-family: BlackFuture;
+    src: url(font/Black\ Future.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0a0a0a;
+    font-family: BlackFuture, sans-serif;
+    overflow: hidden;
+    color: #fff;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.35;
+    animation: float 20s ease-in-out infinite alternate;
+}
+
+.orb-blue {
+    background: #33ccff;
+    top: 10%;
+    left: 10%;
+    animation-duration: 26s;
+}
+
+.orb-purple {
+    background: #9900ff;
+    bottom: 10%;
+    right: 10%;
+    animation-duration: 32s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(60px, -40px);
+    }
+    100% {
+        transform: translate(-40px, 60px);
+    }
+}
+
+.landing {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1.5s ease forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}
+
+.logo {
+    max-width: min(90vw, 480px);
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    font-size: clamp(2rem, 8vw, 5rem);
+    background: linear-gradient(to right, #33ccff, #9900ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+.timer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    font-size: clamp(1.2rem, 5vw, 4rem);
+    max-width: 100%;
+}
+
+.timer span {
+    min-width: 80px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    white-space: nowrap;
+}
+
+.tick {
+    animation: tick 0.35s ease;
+}
+
+@keyframes tick {
+    50% { transform: scale(1.12); }
+}
+
+@media (max-width: 360px) {
+    .timer span {
+        min-width: 70px;
+        padding: 8px 10px;
+    }
+}
