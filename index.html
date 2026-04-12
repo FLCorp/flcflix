@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLC Flix</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="code.css">
     <link rel="icon" href="img/FLC Flix logo.png">
     <link rel="favicon" href="img/FLC Flix logo.png">
 </head>
@@ -25,8 +26,21 @@
             <span><span id="minutes">00</span>m</span>
             <span><span id="seconds">00</span>s</span>
         </div>
+        <div class="code-box">
+            <input type="text" id="codeInput" placeholder="Entrer le code">
+            <button id="codeButton">Valider</button>
+        </div>
     </main>
 
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <img src="img/FILMS.png" alt="Image secrète">
+            <img src="img/SERIES.png" alt="Image secrète">
+        </div>
+    </div>
+
     <script src="timer.js"></script>
+    <script src="code.js"></script>
 </body>
 </html>
